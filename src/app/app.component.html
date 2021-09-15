@@ -1,0 +1,9 @@
+<div class="tabloid">
+{{maintimer.minutes}} <span>m</span> {{maintimer.seconds}}  <span>s</span>
+</div>
+<button (click)="startCount()" *ngIf="startBtn">Start</button>
+<div *ngIf="!startBtn">
+  <button (click)="stopTimer()">Stop</button>
+  <button (click)="dbClickCheck()" #dbClick>Wait</button>
+  <button (click)="resetTimer()">Reset</button>
+</div>
